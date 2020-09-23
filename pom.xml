@@ -27,7 +27,6 @@
         <module>learnexcetors</module>
         <module>learnfuture</module>
         <module>learnatomicinteger</module>
-        <module>learnHashMap</module>
         <module>learnspinlock</module>
         <module>learnwait</module>
         <module>learnBlockQueue</module>
