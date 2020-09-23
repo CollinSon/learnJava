@@ -1,0 +1,10 @@
+synchronized 有三种锁法
+
+1、在实例方法上修饰，那么这时synchronized是对当前对象加锁，底层字节码是对方法进行了ACC_SYNCHRONIZED标记，代表这是个同步方法
+
+2、在静态方法上修饰，那么这时synchronized是对当前类对象加锁，底层字节码是对方法进行了ACC_SYNCHRONIZED标记，代表这是个同步方法，JVM通过ACC_SYNCHRONIZED
+访问标识来辨别是否为一个同步方法，从而执行相对的同步操作
+
+3、在代码块上修饰，加锁的是指定对象，使用的是monitorenter和monitorexit指令,执行monitorenter指令后将锁计数器+1，执行monitorexit指令后将锁计数器置0，表明锁释放成功
+
+每个对象的对象头中都有个montor，这是为什么所有对象能作为锁的原因
