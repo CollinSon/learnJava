@@ -9,9 +9,6 @@ import java.util.Map;
 public class HashMapMain {
 
     static final int MAXIMUM_CAPACITY = 1 << 30;
-
-
-
     //首先看构造器
     /*
     无参构造器是这样的
@@ -213,7 +210,7 @@ public class HashMapMain {
 
     public static void main(String[] args) {
 
-        Map<String,Object> map = new HashMap<>();
+        Map<String,Object> map = new HashMap<>(10);
 
         for (int i=0;i<1000;i++){
             map.put(String.valueOf(i),i);
@@ -221,6 +218,8 @@ public class HashMapMain {
 
         map.put("2000","5000");
         map.get("2000");
+
+        System.out.println(tableSizeFor(1<<30));
 
     }
 

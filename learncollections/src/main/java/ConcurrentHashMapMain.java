@@ -28,5 +28,6 @@ public class ConcurrentHashMapMain {
     public static void main(String[] args) {
         ConcurrentHashMap<String,Object> cMap=new ConcurrentHashMap<>(10);
         cMap.put("1","1");
+        System.out.println(1 >>> 3);
     }
 }
